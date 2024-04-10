@@ -22,6 +22,6 @@
       "max-len": ["error", 200],
       "no-extra-parens": 0,
       "no-restricted-syntax": [0, "DebuggerStatement"],
-      "no-plusplus": 0,
-      "no-debugger": "warn"
+      "no-debugger": "warn",
+      "no-plusplus": 0
   }}
