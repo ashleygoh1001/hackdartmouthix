@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import {
-  BrowserRouter, Routes, Route, NavLink, useParams,
+  createBrowserRouter, RouterProvider, Routes, Route, NavLink, useParams,
 } from 'react-router-dom';
 import './style.scss';
 
@@ -34,20 +34,24 @@ function FallBack(props) {
   return <div>URL Not Found</div>;
 }
 
-function App(props) {
+function Root() {
   return (
-    <BrowserRouter>
-      <div>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Welcome />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/test/:id" element={<Test />} />
-          <Route path="*" element={<FallBack />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/test/:id" element={<Test />} />
+        <Route path="*" element={<FallBack />} />
+      </Routes>
+    </div>
   );
+}
+const router = createBrowserRouter([
+  { path: '*', Component: Root },
+]);
+function App(props) {
+  return <RouterProvider router={router} />;
 }
 
 const root = createRoot(document.getElementById('main'));
