@@ -1,3 +1,1 @@
 # hackdartmouthix
-## Description
-PEDA-FILES!
