@@ -3,22 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Input Example</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Title</title>
 </head>
 <body>
 
-<form id="myForm">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name">
-  <button type="submit">Submit</button>
-</form>
+  <header>
+    <div class="logo">
+      <h1>PEDAfiles</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="plan.html">Make Plan</a></li>
+        <li><a href="pedagogy.html">What's Pedagogy?</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
 <script>
-document.getElementById("myForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent the form from submitting
-  let userInput = document.getElementById("name").value;
-  console.log("Hello, " + userInput + "!");
-});
 </script>
 
 </body>
