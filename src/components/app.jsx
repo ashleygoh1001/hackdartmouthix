@@ -55,7 +55,7 @@ function App() {
             type="text"
             value={topic}
             onChange={handleTopicChange}
-            placeholder="i.e. budgeting for beginners"
+            placeholder="Enter topic here"
           />
         </div>
         <div id="num-students">
@@ -63,7 +63,7 @@ function App() {
             type="text"
             value={numStudents}
             onChange={handleNumStudentsChange}
-            placeholder="Enter a number here"
+            placeholder="Enter number of students here"
           />
         </div>
         <div id="duration">

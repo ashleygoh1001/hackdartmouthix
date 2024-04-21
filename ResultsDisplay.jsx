@@ -21,7 +21,7 @@ function ResultsDisplay({ data }) {
           <p><strong>Activities:</strong> {data.activity}</p>
           <p><strong>Assessment Methods:</strong> {data.assessment}</p>
         </div>
-        <button type="button" onClick={downloadLessonPlan}>Download as PDF</button>
+        <button type="button" onClick={downloadLessonPlan}>Download</button>
       </div>
     </main>
   );
