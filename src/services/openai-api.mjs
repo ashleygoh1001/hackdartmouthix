@@ -2,6 +2,7 @@ import OpenAI from 'openai'; // Correct
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv'; // Import the dotenv package to load environment variables
+import { env } from 'process';
 
 dotenv.config();
 
@@ -9,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(cors()); // Use cors middleware to allow all origins
 
-const openai = new OpenAI({ apiKey: 'sk-proj-Oiz6wiNJczjSzeMEu0ANT3BlbkFJPzXNYITGEohuHLyObo9O' });
+const openai = new OpenAI({ apiKey: env.OPENAI_API_KEY });
 
 const categories = ['math', 'science', 'art', 'history', 'english', 'business/finance', 'engineering', 'computer science', 'foreign language', 'government and politics', 'miscellaneous'];
 
