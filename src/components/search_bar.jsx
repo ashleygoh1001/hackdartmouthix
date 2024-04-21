@@ -13,7 +13,7 @@ function SearchBar({ onSearchSubmit }) {
       <input
         type="text"
         className="form-control"
-        placeholder="Enter topic..."
+        placeholder="Enter a topic to learn about..."
         value={term}
         onChange={(e) => setTerm(e.target.value)}
       />

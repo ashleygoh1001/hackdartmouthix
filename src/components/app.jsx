@@ -8,7 +8,7 @@ function App() {
   const [response, setResponse] = useState('');
 
   const fetchChatGPTResponse = async (query) => {
-    console.log('Search Term:', query); // Inside SearchBar onFormSubmit
+    console.log('Topic To Learn:', query); // Inside SearchBar onFormSubmit
     try {
       const chatGPTResponse = await axios.post('http://localhost:5172/generate-content', { // Added full URL for clarity
         topic: query,
