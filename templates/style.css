@@ -1,0 +1,299 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+h1 {
+  font-family: "JetBrains Mono";
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+h2 {
+  font-family: "JetBrains Mono";
+  font-weight: 800;
+  font-size: 80px;
+  margin-bottom: 0px;
+}
+
+h3 {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 50px;
+}
+
+h4 {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 25px;
+}
+
+p {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.logo a {
+  color: rgb(0,0,0);
+  text-decoration: none;
+}
+
+nav a {
+  float: left;
+  font-family: "JetBrains Mono";
+  color: rgb(0,0,0);;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+nav a:hover {
+  color: black;
+  text-decoration: rgb(203,81,81) underline 6px;
+  transform: scale(1.1);
+  font-weight: 800;
+}
+
+nav a.active {
+  background-color: #04AA6D;
+}
+
+
+section {
+  width: 80%;
+  margin: 50px;
+}
+
+#sub-motto {
+  font-family: "Montserrat";
+  font-weight: 600;
+  display: inline-block;
+}
+
+#sub-motto p {
+  font-size: 30px;
+}
+
+#sub-motto a {
+  color: rgb(203,81,81);
+  font-style: italic;
+  font-weight: 800;
+}
+
+.lets-go {
+  align-items: center;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 24px;
+  color: rgb(252, 252, 252);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color:rgb(90, 87, 255);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.lets-go:hover {
+  background-color:rgb(30, 28, 128);
+}
+
+.get-started h3 {
+  margin-bottom: 30px;
+}
+
+footer {
+  margin: 30px;
+}
+
+.selected {
+  font-weight: 800;
+  text-decoration: rgb(203,81,81) underline 6px;
+}
+
+#about-heading {
+  font-size: 40px;
+}
+
+.about {
+  display: block;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.about p {
+  display: inline-block;
+  justify-content: center;
+  padding-left: 18%;
+  padding-right: 18%;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+#caption p {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+#contact {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.pedagogy-page .pedagogy-heading {
+  text-align: center;
+  width: 100%;
+  font-size: 40px;
+}
+
+#define {
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+}
+
+
+#emphasis {
+  color: rgb(90, 87, 255);
+  font-weight: 800;
+}
+
+#emphasis-red {
+  color: rgb(203,81,81);
+  font-weight: 800;
+}
+
+#explain {
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.make-plan .plan-heading {
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  margin: 0;
+}
+
+.sub-p {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+#explain h4 {
+  margin-bottom: 0;
+}
+
+#explain p {
+  margin-top: 10px;
+}.make-plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  justify-content: center; /* Center the content vertically */
+  height: 100vh; /* Take up the full viewport height */
+}
+
+.plan-heading {
+  text-align: center; /* Center the h1 title */
+  margin-bottom: 20px;
+}
+
+#input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  width: 500px;
+}
+
+#topic,
+#num-students,
+#duration {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.sub-p {
+  font-size: 16px;
+}
+
+input[type="text"],
+select {
+  width: 500px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 8px;
+}
+
+.generate {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.generate button {
+  align-items: center;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 24px;
+  color: rgb(252, 252, 252);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color:rgb(90, 87, 255);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 400px;
+}
+
+.generate button:hover {
+  background-color:rgb(30, 28, 128);
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh; /* Make sure the container takes up the full height of the viewport */
+}
+
+#loading-logo {
+  margin-bottom: 20px; /* Optional: Add some spacing between the logo and the text */
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%   {left:0px; top:0px;}
+  50%  {left:0px; top:40px;}
+  100% {left:0px; top:0px;}
+}
