@@ -131,7 +131,6 @@ footer {
   justify-content: center;
   padding-left: 18%;
   padding-right: 18%;
-  text-align: left;
   font-size: 18px;
   font-weight: 500;
   line-height: 30px;
@@ -145,4 +144,15 @@ footer {
 #contact {
   font-size: 18px;
   font-style: italic;
+}
+
+.pedagogy-page {
+  display: block;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.pedagogy-heading #define {
+  text-align: left;
 }
