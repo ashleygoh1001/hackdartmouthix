@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-
+<body>
   <header>
     <div class="logo">
       <a href="index.html">
@@ -26,6 +26,19 @@
   <main class="final-lesson-plan">
     <div class="results-title">
       <h1>Lesson plan: </h1>
+      <div class="lesson-plan"></div>
+      <h3>Number of students: </h3>
+      <div class="num-students"></div>
+      <h3>Duration: </h3>
+      <div class="duration"></div>
+      <button onclick="downloadLessonPlan()">Download</button>
+    </div>
+
+    <div class="heading" id="overview">Overview</div>
+    <div class="heading" id="lesson-structure">Lesson Structure</div>
+    <div class="heading" id="content">Content</div>
+    <div class="heading" id="additional-materials">Additional Materials</div>
+    <div class="heading" id="resources">Resources</div>
         <div class="lesson-plan"></div>
       <h3>Number of students: </h3>
         <div class="num-students"></div>
@@ -38,7 +51,6 @@
     <div class="heading" id="content"></div>
     <div class="heading" id="additional-materials"></div>
     <div class="heading" id="resources"></div>
-
   </main>
 
   <footer>
@@ -46,5 +58,6 @@
       
     </div>
   </footer>
-
+  <script src="script.js"></script>
+</body>
 </html>

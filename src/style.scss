@@ -1,4 +1,107 @@
 body, html {
+  display: block;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #fff; /* Assuming a white background */
+  color: #333; /* Primary text color */
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background: #eee; /* Header background */
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav a.selected {
+  font-weight: bold;
+}
+
+main {
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.final-lesson-plan .results-title {
+  margin-bottom: 20px;
+}
+
+.final-lesson-plan .results-title h1,
+.final-lesson-plan .results-title h3 {
+  margin: 10px 0;
+}
+
+.final-lesson-plan .heading {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow for depth */
+}
+
+button {
+  background: #0084ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background: #005299;
+}
+
+footer {
+  background: #eee;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+@media print {
+  body * {
+    display: hidden; /* Hide everything in body */
+  }
+
+  #content-to-download, #content-to-download * {
+    visibility: visible; /* Make only lesson plan content visible */
+  }
+
+  #content-to-download {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+    box-shadow: none; /* Remove shadow for printing */
+    border-radius: 0; /* Optional: remove border radius for printing */
+  }
+
+  #content-to-download p {
+    font-size: 12pt; /* Adjust font size for print */
+  }
+
+  button {
+    display: none; /* Hide buttons in print */
+  }
   font-family: "Roboto", sans-serif;
   background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
   height: 100%;
