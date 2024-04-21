@@ -5,7 +5,7 @@ import ResultsDisplay from '../../ResultsDisplay'; // Ensure this is properly im
 function App() {
   const [topic, setTopic] = useState('');
   const [numStudents, setNumStudents] = useState('');
-  const [duration, setDuration] = useState('');
+  const [duration, setDuration] = useState('20');
   const [responseData, setResponseData] = useState({
     overview: '',
     objectives: '',
@@ -68,10 +68,10 @@ function App() {
         </div>
         <div id="duration">
           <select value={duration} onChange={handleDurationChange}>
-            <option value="less-than-twenty">Less than 20 minutes</option>
-            <option value="twenty-to-hour">20 minutes - 1 hour</option>
-            <option value="over-one-hour">1+ hours</option>
-            <option value="over-three-hours">3+ hours</option>
+            <option value="20">Less than 20 minutes</option>
+            <option value="60">20 minutes - 1 hour</option>
+            <option value="120">1+ hours</option>
+            <option value="180">3+ hours</option>
           </select>
         </div>
         <button type="submit" className="generate-button">Generate new plan</button>
