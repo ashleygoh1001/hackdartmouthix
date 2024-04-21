@@ -1,9 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-<<<<<<< HEAD
 import './style.scss';
 import App from './components/app';
-=======
 import {
   createBrowserRouter, RouterProvider, Routes, Route, NavLink, useParams,
 } from 'react-router-dom';
@@ -57,7 +55,6 @@ const router = createBrowserRouter([
 function App(props) {
   return <RouterProvider router={router} />;
 }
->>>>>>> 94a133286ffd93c13fd4f2a4ced18e6915901787
 
 const root = createRoot(document.getElementById('main'));
 root.render(<App />);
