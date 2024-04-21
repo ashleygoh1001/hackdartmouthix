@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+h1 {
+  font-family: "JetBrains Mono";
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+h2 {
+  font-family: "JetBrains Mono";
+  font-weight: 800;
+  font-size: 80px;
+  margin-bottom: 0px;
+}
+
+h3 {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 50px;
+}
+
+h4 {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 25px;
+}
+
+p {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.logo a {
+  color: rgb(0,0,0);
+  text-decoration: none;
+}
+
+nav a {
+  float: left;
+  font-family: "JetBrains Mono";
+  color: rgb(0,0,0);;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+nav a:hover {
+  color: black;
+  text-decoration: rgb(203,81,81) underline 6px;
+  transform: scale(1.1);
+  font-weight: 800;
+}
+
+nav a.active {
+  background-color: #04AA6D;
+}
+
+section {
+  width: 80%;
+  margin: 50px;
+}
+
+#sub-motto {
+  font-family: "Montserrat";
+  font-weight: 600;
+  display: inline-block;
+}
+
+#sub-motto p {
+  font-size: 30px;
+}
+
+#sub-motto a {
+  color: rgb(203,81,81);
+  font-style: italic;
+  font-weight: 800;
+}
+
+.lets-go {
+  align-items: center;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 24px;
+  color: rgb(252, 252, 252);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color:rgb(90, 87, 255);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.get-started h3 {
+  margin-bottom: 30px;
+}
+
+footer {
+  margin: 30px;
+}
+
+.selected {
+  font-weight: 800;
+  text-decoration: rgb(203,81,81) underline 6px;
+}
+
+#about-heading {
+  font-size: 40px;
+}
+
+.about {
+  display: block;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.about p {
+  display: inline-block;
+  justify-content: center;
+  padding-left: 18%;
+  padding-right: 18%;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+#caption p {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+#contact {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.pedagogy-page .pedagogy-heading {
+  text-align: center;
+  width: 100%;
+  font-size: 40px;
+}
+
+#define {
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
+
+}
+
+#explain {
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
+}

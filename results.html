@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
 
   <header>
     <div class="logo">
@@ -18,32 +17,34 @@
       </a>
     </div>
     <nav>
-      <a href="#">Make Plan</a>
+      <a class="selected" href="makeplan.html">Make Plan</a>
       <a href="pedagogy.html">What's Pedagogy?</a>
-      <a href="./about.html">About</a>
+      <a href="about.html">About</a>
     </nav>
   </header>
 
-  <section id="motto">
-    <h2>Teach students the right way.</h2>
-    <div id="sub-motto">
-      <p>We use the <a href="pedagogy.html">pedagogy method</a> to generate the best lesson plan for you and your students.</p>
+  <main class="final-lesson-plan">
+    <div class="results-title">
+      <h1>Lesson plan: </h1>
+        <div class="lesson-plan"></div>
+      <h3>Number of students: </h3>
+        <div class="num-students"></div>
+      <h3>Duration: </h3>
+      <button>Download</button>
     </div>
-  </section>
 
-  <section class="get-started">
-    <h3>Get started today.</h3>
-    <button class="lets-go">Let's go!</button>
-  </section>
+    <div class="heading" id="overview"></div>
+    <div class="heading" id="lesson-structure"></div>
+    <div class="heading" id="content"></div>
+    <div class="heading" id="additional-materials"></div>
+    <div class="heading" id="resources"></div>
+
+  </main>
 
   <footer>
     <div>
-
+      
     </div>
   </footer>
 
-<script>
-</script>
-
-</body>
 </html>
