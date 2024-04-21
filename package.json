@@ -1,8 +1,8 @@
 {
   "name": "hackdartmouthix",
   "version": "1.0.0",
-  "description": "PEDA-FILES!",
-  "main": "pedafile.js",
+  "description": "GoGoGogy",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
