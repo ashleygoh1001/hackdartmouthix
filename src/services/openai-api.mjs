@@ -72,11 +72,11 @@ app.post('/generate-content', async (req, res) => {
 
   // Define specific prompts for different sections of the lesson plan
   const prompts = [
-    { key: 'overview', prompt: `Succinctly describe a ${pedagogy} pedagogical learning model for ${topic} for ${students} students.`, tokens: 200 },
-    { key: 'objectives', prompt: `List the key objectives for that learning model about ${topic}.`, tokens: 100 },
-    { key: 'materials', prompt: `List the materials needed for that learning model on ${topic}.`, tokens: 100 },
-    { key: 'activity', prompt: `Describe an interactive activity related to ${topic}.`, tokens: 150 },
-    { key: 'assessment', prompt: `Suggest methods for assessing knowledge on ${topic}.`, tokens: 80 },
+    { key: 'overview', prompt: `In 50 words or fewer, describe a ${pedagogy} pedagogical learning model for ${topic} for ${students} students.`, tokens: 300 },
+    { key: 'objectives', prompt: `In 50 words or fewer, list the key objectives for a ${pedagogy} learning model about ${topic} for ${students} students.`, tokens: 300 },
+    { key: 'materials', prompt: `In 50 words or fewer, list the learning materials such as articles or websites needed for a ${pedagogy} learning model about ${topic} for ${students} students.`, tokens: 300 },
+    { key: 'activity', prompt: `In 50 words or fewer, describe an interactive activty or come up with a worksheet for a ${pedagogy} learning model about ${topic} for ${students} students.`, tokens: 300 },
+    { key: 'assessment', prompt: `In 50 words or fewer, suggest assessment methods for a ${pedagogy} learning model about ${topic} for ${students} students.`, tokens: 300 },
   ];
 
   const results = {};
