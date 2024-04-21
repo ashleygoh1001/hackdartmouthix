@@ -1,3 +1,4 @@
+/* eslint-disable */
 import OpenAI from 'openai'; // Ensure OpenAI SDK is correctly imported
 import express from 'express';
 import cors from 'cors';

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Make Plan</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="make-plan">
+    <script src="https://unpkg.com/@openai/gpt-3-browser"></script>
+  <h1 class="plan-heading">Let's get started!</h1>
+  <section id="input-section">
+    <div id="topic">
+      <div id="text">
+        <p>What topic do you want to teach?</p>
+        <p class="sub-p">Please be specific so we can help you as best we can :) </p>
+      </div>
+      <input type="text" id="topic-input" placeholder="i.e. budgeting for beginners" />
+    </div>
+    <div id="num-students">
+      <p>How many students are you teaching?</p>
+      <input type="text" placeholder="Enter a number here" />
+    </div>
+    <div id="duration">
+      <label for="duration">
+        <p>What is the duration of your lesson?</p>
+      </label>
+      <select name="duration" id="duration-dropdown">
+        <option value="less-than-twenty">Less than 20 minutes</option>
+        <option value="twenty-to-hour">20 minutes - 1 hour</option>
+        <option value="over-one-hour">1+ hours</option>
+        <option value="over-three-hours">3+ hours</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="generate">
+    <a href="results.html">
+      <button class="generate-button">Generate new plan</button>
+    </a>
+  </section>
+
+  <!-- Add this script tag -->
+  <script src="testing.js"></script>
+</body>
+<footer>
+  <div></div>
+</footer>
+</html>
