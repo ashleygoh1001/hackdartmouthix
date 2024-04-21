@@ -167,7 +167,18 @@ footer {
   text-align: left;
   padding-left: 10%;
   padding-right: 10%;
+  display: flex;
+}
 
+
+#emphasis {
+  color: rgb(90, 87, 255);
+  font-weight: 800;
+}
+
+#emphasis-red {
+  color: rgb(203,81,81);
+  font-weight: 800;
 }
 
 #explain {
