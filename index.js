@@ -1,27 +1,49 @@
-import OpenAI from 'openai';
+import dotenv from 'dotenv';
+import { OpenAI } from 'openai';
+import readline from 'readline';
 
-const openai = new OpenAI({
-  apiKey: 'sk-proj-xJzafClO9P64ENiNG8DDT3BlbkFJdaoAM08mSCFnavPP4htp',
-  apiKey: process.env['sk-proj-xJzafClO9P64ENiNG8DDT3BlbkFJdaoAM08mSCFnavPP4htp'],
+dotenv.config()
+
+// Get the OpenAI API key
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
+// Create a readline interface to read user input
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
 });
 
-const createChatCompletion = async () => {
+// Define each of the pedagogical methods
+
+
+// Determine which category the topic falls under - math, science, art, history, english, business/finance, engineering, computer science, or foreign language
+const categories = ['math', 'science', 'art', 'history', 'english', 'business/finance', 'engineering', 'computer science', 'foreign language', 'government and politics', 'miscellaneous'];
+const math_pedagogy = ["Khan Academy", "Peer Instruction", "Differentiated Instruction", "Project-based Learning"];
+
+async function main() {
   try {
-    const response = await openai.chat.completions.create({
-      model: 'gpt-4',
-      messages: [
-        { role: 'system', content: 'You are a helpful assistant.' },
-        { role: 'user', content: 'Who won the world series in 2020?' },
-        { role: 'assistant', content: 'The Los Angeles Dodgers won the World Series in 2020.' },
-        { role: 'user', content: 'Where was it played?' },
-        { role: 'assistant', content: 'The World Series was played in Arlington, Texas at the Globe Life Field.' },
-      ],
+    rl.question("Enter a topic you want to learn about: ", async (topic) => {
+      try {
+        const completion = await openai.completions.create({
+          model: "gpt-3.5-turbo-instruct",
+          prompt: `classify ${topic} as only one of the following categories: ${categories.join(', ')}`,
+          max_tokens: 150
+        });
+        if (completion && completion.choices && completion.choices.length > 0) {
+          console.log(completion.choices[0].text);
+        } else {
+          console.error("No completion choices found in the response.");
+          console.log("Completion Response:", completion);
+        }
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+      rl.close();
     });
-
-    console.log(response.choices[0].message.content);
   } catch (error) {
-    console.error('Error creating chat completion:', error);
+    console.error("An error occurred:", error);
   }
-};
 
-createChatCompletion();
+}
+
+main();
