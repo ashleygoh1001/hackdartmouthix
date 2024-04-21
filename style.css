@@ -108,6 +108,10 @@ section {
   cursor: pointer;
 }
 
+.lets-go:hover {
+  background-color:rgb(30, 28, 128);
+}
+
 .get-started h3 {
   margin-bottom: 30px;
 }
@@ -169,4 +173,91 @@ footer {
   text-align: left;
   padding-left: 10%;
   padding-right: 10%;
+}
+
+.make-plan .plan-heading {
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  margin: 0;
+}
+
+.sub-p {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+#explain h4 {
+  margin-bottom: 0;
+}
+
+#explain p {
+  margin-top: 10px;
+}.make-plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  justify-content: center; /* Center the content vertically */
+  height: 100vh; /* Take up the full viewport height */
+}
+
+.plan-heading {
+  text-align: center; /* Center the h1 title */
+  margin-bottom: 20px;
+}
+
+#input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  width: 500px;
+}
+
+#topic,
+#num-students,
+#duration {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.sub-p {
+  font-size: 16px;
+}
+
+input[type="text"],
+select {
+  width: 500px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 8px;
+}
+
+.generate {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.generate button {
+  align-items: center;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 24px;
+  color: rgb(252, 252, 252);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color:rgb(90, 87, 255);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 400px;
+}
+
+.generate button:hover {
+  background-color:rgb(30, 28, 128);
 }
