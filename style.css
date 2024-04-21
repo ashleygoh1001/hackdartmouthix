@@ -71,6 +71,7 @@ nav a.active {
   background-color: #04AA6D;
 }
 
+
 section {
   width: 80%;
   margin: 50px;
@@ -260,4 +261,28 @@ select {
 
 .generate button:hover {
   background-color:rgb(30, 28, 128);
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh; /* Make sure the container takes up the full height of the viewport */
+}
+
+#loading-logo {
+  margin-bottom: 20px; /* Optional: Add some spacing between the logo and the text */
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%   {left:0px; top:0px;}
+  50%  {left:0px; top:40px;}
+  100% {left:0px; top:0px;}
 }
