@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import eslint from 'vite-plugin-eslint';
 import autoprefixer from 'autoprefixer';
+<<<<<<< HEAD
 import react from '@vitejs/plugin-react';
 // import vitePluginFaviconsInject from 'vite-plugin-favicons-inject';
 
@@ -20,6 +21,14 @@ export default defineConfig({
       },
     },
   },
+=======
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    eslint(),
+  ],
+>>>>>>> 94a133286ffd93c13fd4f2a4ced18e6915901787
   css: {
     postcss: {
       plugins: [

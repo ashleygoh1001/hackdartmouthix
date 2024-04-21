@@ -1,4 +1,5 @@
 body, html {
+<<<<<<< HEAD
   display: block;
   height: 100%;
   margin: 0;
@@ -102,4 +103,25 @@ footer {
   button {
     display: none; /* Hide buttons in print */
   }
+=======
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
+  height: 100%;
+}
+
+.logo {
+  background-image: url('image.jpg');
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+:root {
+  text-size-adjust: 100%;
+}
+
+.active {
+  color: pink;
+>>>>>>> 94a133286ffd93c13fd4f2a4ced18e6915901787
 }
