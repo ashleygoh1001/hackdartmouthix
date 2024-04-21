@@ -1,9 +1,14 @@
 /* eslint-disable */
-const dotenv = require('dotenv');
-const { OpenAI } = require('openai');
-const readline = require('readline');
+// const dotenv = require('dotenv');
+// const { OpenAI } = require('openai');
+// const readline = require('readline');
 
-dotenv.config();
+// Importing modules using ES module syntax
+// import dotenv from './dotenv';
+import { OpenAI } from 'openai';
+
+// Initialize dotenv
+// dotenv.config();
 
 // Get the OpenAI API key
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -60,14 +65,14 @@ function getCategory() {
   });
 }
 
-async function main() {
-  try {
-    const { category, pedagogy } = await getCategory();
-    console.log(`Category: ${category}`);
-    console.log(`Pedagogy: ${pedagogy}`);
-  } catch (error) {
-    console.error('An error occurred:', error);
-  }
+function main() {
+  // try {
+  //   const { category, pedagogy } = await getCategory();
+  //   console.log(`Category: ${category}`);
+  //   console.log(`Pedagogy: ${pedagogy}`);
+  // } catch (error) {
+  //   console.error('An error occurred:', error);
+  // }
 }
 
 main();
