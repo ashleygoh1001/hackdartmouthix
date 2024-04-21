@@ -1,3 +1,2 @@
 # hackdartmouthix
-## Description
-PEDA-FILES!
+## GoGoGogy
