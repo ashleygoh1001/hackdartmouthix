@@ -1,8 +1,9 @@
-import dotenv from 'dotenv';
-import { OpenAI } from 'openai';
-import readline from 'readline';
+/* eslint-disable */
+const dotenv = require('dotenv');
+const { OpenAI } = require('openai');
+const readline = require('readline');
 
-dotenv.config()
+dotenv.config();
 
 // Get the OpenAI API key
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -10,7 +11,7 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 // Create a readline interface to read user input
 const rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout,
 });
 
 // Determine which category the topic falls under
@@ -28,27 +29,27 @@ const pedagogyMap = {
   'computer science': ["Khan Academy", "Peer Instruction", "Project-based Learning", "Project-based Learning"],
   'foreign language': ["Khan Academy", "Peer Instruction", "Differentiated Instruction", "Project-based Learning"],
   'government and politics': ["Khan Academy", "Peer Instruction", "Inquiry-based Instruction through Case Studies", "Project-based Learning"],
-  miscellaneous: ["Pedagogical Model", "Pedagogical Model", "Pedagogical Model", "Pedagogical Model"]
+  miscellaneous: ["Pedagogical Model", "Pedagogical Model", "Pedagogical Model", "Pedagogical Model"],
 };
 
 function getCategory() {
   return new Promise((resolve, reject) => {
-    rl.question("Enter a topic you want to learn about: ", async (topic) => {
+    rl.question('Enter a topic you want to learn about: ', async (topic) => {
       try {
         const completion = await openai.completions.create({
-          model: "gpt-3.5-turbo-instruct",
+          model: 'gpt-3.5-turbo-instruct',
           prompt: `classify ${topic} as only one of the following categories: ${categories.join(', ')}`,
-          max_tokens: 150
+          max_tokens: 150,
         });
         if (completion && completion.choices && completion.choices.length > 0) {
-          let category = completion.choices[0].text.trim().toLowerCase();
+          const category = completion.choices[0].text.trim().toLowerCase();
           if (categories.includes(category)) {
             resolve({ category, pedagogy: pedagogyMap[category].join(', ') });
           } else {
-            reject(new Error("Invalid category received."));
+            reject(new Error('Invalid category received.'));
           }
         } else {
-          reject(new Error("No completion choices found in the response."));
+          reject(new Error('No completion choices found in the response.'));
         }
       } catch (error) {
         reject(error);
@@ -65,7 +66,7 @@ async function main() {
     console.log(`Category: ${category}`);
     console.log(`Pedagogy: ${pedagogy}`);
   } catch (error) {
-    console.error("An error occurred:", error);
+    console.error('An error occurred:', error);
   }
 }
 

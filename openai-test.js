@@ -10,7 +10,7 @@ async function main() {
     const completion = await openai.completions.create({
       model: "gpt-3.5-turbo-instruct",
       prompt: "teach me how to make a paper airplane",
-      max_tokens: 150
+      max_tokens: 150,
     });
     if (completion && completion.choices && completion.choices.length > 0) {
       console.log(completion.choices[0].text);
